@@ -1,0 +1,4 @@
+install-html.patch
+xml2-config-fix.patch
+python3-unicode-errors.patch
+CVE-2022-29824.patch
