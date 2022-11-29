@@ -1,3 +1,21 @@
+libxml2 (2.9.13+dfsg-1ubuntu0.2) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: NULL pointer dereference
+    - debian/patches/CVE-2022-2309.patch: reset nsNr in
+      xmlCtxReset in parser.c (LP: #1996494).
+    - CVE-2022-2309
+  * SECURITY UPDATE: Integer overflow
+    - debian/patches/CVE-2022-40303.patch: fix integer overflows
+      with XML_PARSE_HUGE in parser.c.
+    - CVE-2022-40303
+  * SECURITY UPDATE: Double-free
+    - debian/patches/CVE-2022-40304.patch: fix dict
+      corruption caused by entity ref cycles in
+      entities.c.
+    - CVE-2022-40304
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Tue, 29 Nov 2022 16:39:07 -0300
+
 libxml2 (2.9.13+dfsg-1ubuntu0.1) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Integer overflows
