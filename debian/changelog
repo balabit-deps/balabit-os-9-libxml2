@@ -1,3 +1,21 @@
+libxml2 (2.9.13+dfsg-1ubuntu0.3) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Null dereference
+    - debian/patches/CVE-2023-28484-*.patch: Fix null-pointer-deref in
+      xmlSchemaCheckCOSSTDerivedOK and xmlSchemaFixupComplexType
+      when parsing (invalid) XML schemas in
+      result/schemas/oss-fuzz-51295_0_0.err,
+      test/schemas/oss-fuzz-51295_0.xml,
+      test/schemas/oss-fuzz-51295_0.xsd,
+      xmlschemas.c.
+    - CVE-2023-28484
+  * SECURITY UPDATE: Logic or memory errors and double frees
+    - debian/patches/CVE-2023-29469.patch: check namelen less equal zero in
+      dict.c.
+    - CVE-2023-29469
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Fri, 14 Apr 2023 08:19:12 -0300
+
 libxml2 (2.9.13+dfsg-1ubuntu0.2) jammy-security; urgency=medium
 
   * SECURITY UPDATE: NULL pointer dereference
