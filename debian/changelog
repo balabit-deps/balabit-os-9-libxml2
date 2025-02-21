@@ -1,3 +1,22 @@
+libxml2 (2.9.13+dfsg-1ubuntu0.6) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: use-after-free
+    - debian/patches/CVE-2024-56171.patch: Fix use-after-free after
+      xmlSchemaItemListAdd.
+    - CVE-2024-56171
+  * SECURITY UPDATE: stack-based buffer overflow
+    - debian/patches/CVE-2025-24928-pre1.patch: Check for NULL node->name
+      in xmlSnprintfElements.
+    - debian/patches/CVE-2025-24928.patch: Fix stack-buffer-overflow in
+      xmlSnprintfElements.
+    - CVE-2025-24928
+  * SECURITY UPDATE: NULL pointer dereference
+    - debian/patches/CVE-2025-27113.patch: Fix compilation of explicit
+      child axis.
+    - CVE-2025-27113
+
+ -- Fabian Toepfer <fabian.toepfer@canonical.com>  Fri, 21 Feb 2025 15:30:55 +0100
+
 libxml2 (2.9.13+dfsg-1ubuntu0.5) jammy-security; urgency=medium
 
   * SECURITY UPDATE: use-after-free in xmlXIncludeAddNode
