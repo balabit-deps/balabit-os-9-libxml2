@@ -1,3 +1,20 @@
+libxml2 (2.9.13+dfsg-1ubuntu0.7) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: OOB access in python API
+    - debian/patches/CVE-2025-32414-pre1.patch: fix SAX driver with
+      character streams in python/drv_libxml2.py.
+    - debian/patches/CVE-2025-32414-1.patch: read at most len/4 characters
+      in python/libxml.c.
+    - debian/patches/CVE-2025-32414-2.patch: add a test in
+      python/tests/Makefile.am, python/tests/unicode.py.
+    - CVE-2025-32414
+  * SECURITY UPDATE: heap under-read in xmlSchemaIDCFillNodeTables
+    - debian/patches/CVE-2025-32415.patch: fix heap buffer overflow in
+      xmlSchemaIDCFillNodeTables in xmlschemas.c.
+    - CVE-2025-32415
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 24 Apr 2025 14:42:32 -0400
+
 libxml2 (2.9.13+dfsg-1ubuntu0.6) jammy-security; urgency=medium
 
   * SECURITY UPDATE: use-after-free
