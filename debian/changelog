@@ -1,3 +1,22 @@
+libxml2 (2.9.13+dfsg-1ubuntu0.8) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: stack-based buffer overflow
+    - debian/patches/CVE-2025-6021.patch: fix integer overflow by adding
+      bound checks in xmlBuildQName in tree.c
+      prevent integer overflow
+    - debian/patches/CVE-2025-6170.patch: fix buffer overflow by adding
+      bound checks in xmlShell in debugXML.c
+    - CVE-2025-6021
+    - CVE-2025-6170
+  * SECURITY UPDATE: UAF and type confusion
+    - debian/patches/CVE-2025-49794_49796.patch: fix UAF by returning node
+      and freeing it after use; fix type confusion by adding type check in
+      xmlSchematronFormatReport in schematron.c
+    - CVE-2025-49794
+    - CVE-2025-49796
+
+ -- Shishir Subedi <shishir.subedi@canonical.com>  Sat, 09 Aug 2025 11:59:21 +0545
+
 libxml2 (2.9.13+dfsg-1ubuntu0.7) jammy-security; urgency=medium
 
   * SECURITY UPDATE: OOB access in python API
